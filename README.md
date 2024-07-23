@@ -168,4 +168,11 @@ const promptUser = () => {
 };
 
 promptUser();
+npm install -g pkg
+pkg script.js -t node14-linux-x64,node14-macos-x64,node14-win-x64
+./script-linux    # On Linux
+./script-macos    # On macOS
+./script-win.exe  # On Windows
+
+This `README.md` provides a comprehensive overview of your project, including features, installation steps, usage instructions, and how to convert the script to an executable.
 
