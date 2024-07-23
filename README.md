@@ -168,11 +168,29 @@ const promptUser = () => {
 };
 
 promptUser();
+```
+
+## Converting to an Executable
+ Install pkg Globally:
+ 
+```bash
 npm install -g pkg
-pkg script.js -t node14-linux-x64,node14-macos-x64,node14-win-x64
+```
+
+ ## Build Executables:
+ ```bash
+ pkg script.js -t node14-linux-x64,node14-macos-x64,node14-win-x64
+```
+
+## Run the Executable:
+```bash
 ./script-linux    # On Linux
 ./script-macos    # On macOS
 ./script-win.exe  # On Windows
+```
 
+## License
+### MIT License. See the LICENSE file for details.
+```bash
 This `README.md` provides a comprehensive overview of your project, including features, installation steps, usage instructions, and how to convert the script to an executable.
-
+```
