@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import clipboardy from 'clipboardy';
-import { calculateBMI, stressEstimator, workoutPlanGenerator, vo2MaxEstimation, bodyFatPercentage, hydrationNeeds, calorieCalculator, heartRateZones, macrosCalculation, oneRepMax } from "./index.js";
+import { calculateBMI, stressEstimator, workoutPlanGenerator, vo2MaxEstimation, calorieCalculator, hydrationNeeds, bodyFatPercentage, macrosCalculation, heartRateZones, oneRepMax } from "./index.js";
 
 const questions = [
     {
@@ -12,17 +12,15 @@ const questions = [
             'stressEstimator',
             'workoutPlanGenerator',
             'vo2MaxEstimation',
-            'bodyFatPercentage',
-            'hydrationNeeds',
             'calorieCalculator',
-            'heartRateZones',
+            'hydrationNeeds',
+            'bodyFatPercentage',
             'macrosCalculation',
+            'heartRateZones',
             'oneRepMax'
         ]
     }
 ];
-
-
 
 const promptUser = () => {
     inquirer.prompt(questions).then(answers => {
@@ -36,7 +34,6 @@ const promptUser = () => {
                 ]).then(({ weight, height }) => {
                     const result = calculateBMI(parseFloat(weight), parseFloat(height));
                     clipboardy.writeSync(result.toString());
-                  
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -48,7 +45,6 @@ const promptUser = () => {
                 ]).then(({ level, duration, frequency }) => {
                     const result = stressEstimator(parseInt(level), parseInt(duration), parseInt(frequency));
                     clipboardy.writeSync(result.toString());
-                    
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -60,7 +56,6 @@ const promptUser = () => {
                 ]).then(({ daysPerWeek, duration, type }) => {
                     const result = workoutPlanGenerator(parseInt(daysPerWeek), duration, type);
                     clipboardy.writeSync(result.toString());
-                    
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -71,7 +66,6 @@ const promptUser = () => {
                 ]).then(({ runTime, distance }) => {
                     const result = vo2MaxEstimation(parseFloat(runTime), parseFloat(distance));
                     clipboardy.writeSync(result.toString());
-                    
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -82,7 +76,6 @@ const promptUser = () => {
                 ]).then(({ weight, height }) => {
                     const result = bodyFatPercentage(parseFloat(weight), parseFloat(height));
                     clipboardy.writeSync(result.toString());
-                    
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -92,7 +85,6 @@ const promptUser = () => {
                 ]).then(({ weight }) => {
                     const result = hydrationNeeds(parseFloat(weight));
                     clipboardy.writeSync(result.toString());
-                    
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -103,7 +95,6 @@ const promptUser = () => {
                 ]).then(({ weight, height }) => {
                     const result = calorieCalculator(parseFloat(weight), parseFloat(height));
                     clipboardy.writeSync(result.toString());
-                  
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -113,7 +104,6 @@ const promptUser = () => {
                 ]).then(({ age }) => {
                     const result = heartRateZones(parseInt(age));
                     clipboardy.writeSync(result.toString());
-                   
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -124,10 +114,8 @@ const promptUser = () => {
                 ]).then(({ weight, height }) => {
                     const result = macrosCalculation(parseFloat(weight), parseFloat(height));
                     clipboardy.writeSync(result.toString());
-                   
                     console.log('Result copied to clipboard!');
                 });
-                
                 break;
             case "oneRepMax":
                 inquirer.prompt([
@@ -136,7 +124,6 @@ const promptUser = () => {
                 ]).then(({ weight, reps }) => {
                     const result = oneRepMax(parseFloat(weight), parseInt(reps));
                     clipboardy.writeSync(result.toString());
-                   
                     console.log('Result copied to clipboard!');
                 });
                 break;
@@ -146,7 +133,5 @@ const promptUser = () => {
         }
     });
 }
-
-
 
 promptUser();
