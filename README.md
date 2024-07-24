@@ -27,7 +27,7 @@ npm install inquirer clipboardy
 
 import inquirer from 'inquirer';
 import clipboardy from 'clipboardy';
-import { calculateBMI, stressEstimator, workoutPlanGenerator, vo2MaxEstimation, bodyFatPercentage, hydrationNeeds, calorieCalculator, heartRateZones, macrosCalculation, oneRepMax } from "./index.js";
+import { calculateBMI, stressEstimator, workoutPlanGenerator, vo2MaxEstimation, bodyFatPercentage, hydrationNeeds, calorieCalculator, heartRateZones, macrosCalculation, oneRepMax } from "fitmefy";
 
 const questions = [
     {
