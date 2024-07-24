@@ -17,7 +17,7 @@ A Node.js package for fitness calculations including BMI, stress estimation, wor
 
 ## Installation
 
-### Install dependencies with npm:
+###  Install dependencies with npm:
 
 ```bash
 
