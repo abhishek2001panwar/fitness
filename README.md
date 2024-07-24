@@ -17,10 +17,14 @@ A Node.js package for fitness calculations including BMI, stress estimation, wor
 
 ## Installation
 
-Install dependencies with npm:
+### Install dependencies with npm:
+``bash
+npm install inquirer clipboardy
+
+```
 
 ```bash
-npm install inquirer clipboardy
+
 import inquirer from 'inquirer';
 import clipboardy from 'clipboardy';
 import { calculateBMI, stressEstimator, workoutPlanGenerator, vo2MaxEstimation, bodyFatPercentage, hydrationNeeds, calorieCalculator, heartRateZones, macrosCalculation, oneRepMax } from "./index.js";
