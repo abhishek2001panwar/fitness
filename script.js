@@ -127,6 +127,7 @@ const promptUser = () => {
                    
                     console.log('Result copied to clipboard!');
                 });
+                
                 break;
             case "oneRepMax":
                 inquirer.prompt([
