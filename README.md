@@ -57,7 +57,7 @@ const promptUser = () => {
             case "calculateBMI":
                 inquirer.prompt([
                     { type: 'input', name: 'weight', message: 'Enter weight (kg):', validate: input => !isNaN(input) },
-                    { type: 'input', name: 'height', message: 'Enter height (m):', validate: input => !isNaN(input) }
+                    { type: 'input', name: 'height', message: 'Enter height (cm):', validate: input => !isNaN(input) }
                 ]).then(({ weight, height }) => {
                     const result = calculateBMI(parseFloat(weight), parseFloat(height));
                     clipboardy.writeSync(result.toString());
